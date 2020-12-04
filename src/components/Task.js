@@ -2,7 +2,7 @@ import React from 'react'
 
 function Task(props) {
   return (
-    <div>
+    <div className='list-group-item'>
       <p>
         <input
           type='checkbox'
@@ -19,11 +19,17 @@ function Task(props) {
               textDecoration: 'line-through',
             }}
           >
-            {props.id} . {props.text}
+            {' '}
+            {props.text}
           </span>
         ) : (
-          <span>
-            {props.id} . {props.text}
+          <span
+            style={{
+              fontSize: '20px',
+            }}
+          >
+            {' '}
+            {props.text}
           </span>
         )}
       </p>
